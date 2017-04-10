@@ -101,7 +101,9 @@ public class Runner extends Application {
         middleTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             try {
                 network.setNumberOfHosts(Integer.parseInt(newValue));
-            } catch (NumberFormatException e) {}
+            } catch (NumberFormatException e) {
+                middleTextField.setText("");
+            }
         });
         middleVBox.getChildren().addAll(middleLabel, middleTextField);
 
