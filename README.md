@@ -1,2 +1,2 @@
 # NetworkSubnettingTool
-This is a tool for network subnetting.
+This is a simple UI tool for network subnetting.
