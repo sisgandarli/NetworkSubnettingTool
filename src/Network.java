@@ -2,6 +2,10 @@ public class Network {
     private String networkName;
     private int numberOfHosts;
 
+    public Network() {
+
+    }
+
     public Network(String networkName, int numberOfHosts) {
         this.networkName = networkName;
         this.numberOfHosts = numberOfHosts;
