@@ -1,15 +1,15 @@
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 
 public class Runner extends Application {
@@ -29,6 +29,8 @@ public class Runner extends Application {
 
     private Button addNetworkButton;
     private Button runNetworkSubnettingButton;
+
+    private static ArrayList<Network> networks = new ArrayList<>();
 
     private void initializeUIComponents() {
         layout = new VBox();
@@ -76,6 +78,9 @@ public class Runner extends Application {
     }
 
     private void handleAddNetworkButton() {
+        Network network = new Network();
+        networks.add(network);
+
         HBox networkHBox = new HBox();
 
         VBox leftVBox = new VBox();
@@ -88,16 +93,23 @@ public class Runner extends Application {
 
         Label leftLabel = new Label("Network Name");
         TextField leftTextField = new TextField();
+        leftTextField.textProperty().addListener((observable, oldValue, newValue) -> network.setNetworkName(newValue));
         leftVBox.getChildren().addAll(leftLabel, leftTextField);
 
         Label middleLabel = new Label("Number of Hosts");
         TextField middleTextField = new TextField();
+        middleTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                network.setNumberOfHosts(Integer.parseInt(newValue));
+            } catch (NumberFormatException e) {}
+        });
         middleVBox.getChildren().addAll(middleLabel, middleTextField);
 
         Label rightLabel = new Label("Delete Network");
         Button rightButton = new Button("Delete!");
         rightButton.setOnAction(event -> {
             middleContent.getChildren().remove(networkHBox);
+            networks.remove(network);
             stage.sizeToScene();
         });
         rightVBox.getChildren().addAll(rightLabel, rightButton);
@@ -113,7 +125,9 @@ public class Runner extends Application {
         if (event.getSource() == addNetworkButton) {
             handleAddNetworkButton();
         } else if (event.getSource() == runNetworkSubnettingButton) {
-
+            for (Network i : networks) {
+                System.out.println(i);
+            }
         }
     }
 }
