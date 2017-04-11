@@ -93,15 +93,26 @@ public class Runner extends Application {
 
         Label leftLabel = new Label("Network Name");
         TextField leftTextField = new TextField();
-        leftTextField.textProperty().addListener((observable, oldValue, newValue) -> network.setNetworkName(newValue));
+        TextField middleTextField = new TextField();
+        leftTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            network.setNetworkName(newValue);
+            if (newValue.toLowerCase().startsWith("wan")) {
+                network.setNumberOfHosts(2);
+                middleTextField.setText("2");
+                middleTextField.setEditable(false);
+            } else {
+                network.setNumberOfHosts(0);
+                middleTextField.setText("");
+                middleTextField.setEditable(true);
+            }
+        });
         leftVBox.getChildren().addAll(leftLabel, leftTextField);
 
         Label middleLabel = new Label("Number of Hosts");
-        TextField middleTextField = new TextField();
         middleTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             try {
                 network.setNumberOfHosts(Integer.parseInt(newValue));
-            } catch (NumberFormatException e) {
+            } catch (IllegalArgumentException e) {
                 middleTextField.setText("");
             }
         });
