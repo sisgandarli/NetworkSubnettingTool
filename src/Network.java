@@ -3,7 +3,7 @@ public class Network {
     private int numberOfHosts;
 
     public Network() {
-
+        this.networkName = "";
     }
 
     public Network(String networkName, int numberOfHosts) {
