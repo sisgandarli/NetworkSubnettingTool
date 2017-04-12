@@ -5,17 +5,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Runner extends Application {
     private Stage stage;
 
-    private VBox layout;
+    private HBox layout;
+
+    private VBox leftLayout;
+    private VBox rightLayout;
+
     private VBox header;
     private VBox middle;
     private VBox footer;
@@ -31,14 +38,19 @@ public class Runner extends Application {
     private Button runNetworkSubnettingButton;
 
     private static ArrayList<Network> networks = new ArrayList<>();
+    private static ArrayList<Subnet> subnets;
 
     private void initializeUIComponents() {
-        layout = new VBox();
+        layout = new HBox();
+
+        leftLayout = new VBox();
+        rightLayout = new VBox();
+        layout.getChildren().addAll(leftLayout, rightLayout);
 
         header = new VBox();
         middle = new VBox();
         footer = new VBox();
-        layout.getChildren().addAll(header, middle, footer);
+        leftLayout.getChildren().addAll(header, middle, footer);
 
         headerContent = new HBox();
         headerContent.setAlignment(Pos.CENTER_RIGHT);
@@ -58,8 +70,18 @@ public class Runner extends Application {
 
         addNetworkButton = new Button("Add Network");
         addNetworkButton.setOnAction(event -> handle(event));
+        addNetworkButton.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                handleAddNetworkButton();
+            }
+        });
         runNetworkSubnettingButton = new Button("Divide into Networks");
         runNetworkSubnettingButton.setOnAction(event -> handle(event));
+        runNetworkSubnettingButton.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                handleRunNetworkSubnettingButton();
+            }
+        });
         footerContent.getChildren().addAll(addNetworkButton, runNetworkSubnettingButton);
     }
 
@@ -101,8 +123,6 @@ public class Runner extends Application {
                 middleTextField.setText("2");
                 middleTextField.setEditable(false);
             } else {
-                network.setNumberOfHosts(0);
-                middleTextField.setText("");
                 middleTextField.setEditable(true);
             }
         });
@@ -120,6 +140,13 @@ public class Runner extends Application {
 
         Label rightLabel = new Label("Delete Network");
         Button rightButton = new Button("Delete!");
+        rightButton.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                middleContent.getChildren().remove(networkHBox);
+                networks.remove(network);
+                stage.sizeToScene();
+            }
+        });
         rightButton.setOnAction(event -> {
             middleContent.getChildren().remove(networkHBox);
             networks.remove(network);
@@ -133,14 +160,42 @@ public class Runner extends Application {
         rightButton.setMinWidth(rightLabel.getWidth());
     }
 
+    private void generateRightLayout() {
+        GridPane gridPane = new GridPane();
+
+        gridPane.add(new Label("Network Name"), 0, 0);
+        gridPane.add(new Label("Network Address"), 1, 0);
+        gridPane.add(new Label("Left Boundary"), 2, 0);
+        gridPane.add(new Label("Right Boundary"), 3, 0);
+        gridPane.add(new Label("Broadcast Address"), 4, 0);
+
+
+        int rowNum = 1;
+        for (Subnet i : subnets) {
+            gridPane.add(new Label(i.getNetworkName()), 0, rowNum);
+            gridPane.add(new Label(i.getNetworkAddressPretty()),1, rowNum);
+            gridPane.add(new Label(i.getLeftBoundaryPretty()), 2, rowNum);
+            gridPane.add(new Label(i.getRightBoundaryPretty()), 3, rowNum);
+            gridPane.add(new Label(i.getBroadcastAddressPretty()), 4, rowNum);
+            rowNum++;
+        }
+        rightLayout.getChildren().add(gridPane);
+        stage.sizeToScene();
+    }
+
+    private void handleRunNetworkSubnettingButton() {
+        Collections.sort(networks);
+        NetworkSubnetter networkSubnetter = new NetworkSubnetter(networkAddressTextField.getText(), networks);
+        subnets = networkSubnetter.createSubnets();
+        generateRightLayout();
+
+    }
 
     private void handle(ActionEvent event) {
         if (event.getSource() == addNetworkButton) {
             handleAddNetworkButton();
         } else if (event.getSource() == runNetworkSubnettingButton) {
-            for (Network i : networks) {
-                System.out.println(i);
-            }
+            handleRunNetworkSubnettingButton();
         }
     }
 }
