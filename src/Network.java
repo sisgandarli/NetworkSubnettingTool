@@ -50,6 +50,6 @@ public class Network implements Comparable<Network> {
 
     @Override
     public int compareTo(Network o) {
-        return Integer.compare(this.numberOfHosts, o.numberOfHosts);
+        return -Integer.compare(this.numberOfHosts, o.numberOfHosts);
     }
 }
