@@ -1,4 +1,4 @@
-public class Network {
+public class Network implements Comparable<Network> {
     private String networkName;
     private int numberOfHosts;
 
@@ -46,5 +46,10 @@ public class Network {
     @Override
     public String toString() {
         return String.format("%s : %d", networkName, numberOfHosts);
+    }
+
+    @Override
+    public int compareTo(Network o) {
+        return Integer.compare(this.numberOfHosts, o.numberOfHosts);
     }
 }
