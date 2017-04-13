@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 public class Runner extends Application {
     private Stage stage;
 
