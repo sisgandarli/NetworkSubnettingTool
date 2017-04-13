@@ -75,7 +75,7 @@ public class Runner extends Application {
                 handleAddNetworkButton();
             }
         });
-        runNetworkSubnettingButton = new Button("Divide into Networks");
+        runNetworkSubnettingButton = new Button("Divide into Subnets");
         runNetworkSubnettingButton.setOnAction(event -> handle(event));
         runNetworkSubnettingButton.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {

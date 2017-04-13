@@ -6,6 +6,7 @@ public class NetworkSubnetter {
     private String address;
     private int prefix;
     private int hostsBits;
+    private String addressInBinary;
     private String networkAddressInBinary;
     private int prevNeworkAddressInDecimal;
 
@@ -24,21 +25,20 @@ public class NetworkSubnetter {
         this.address = splitted[0];
         this.prefix = Integer.parseInt(splitted[1]);
         this.hostsBits = 32 - prefix;
-        this.networkAddressInBinary = "";
+        this.addressInBinary = "";
         this.subnetMask = "";
 
         for (int i = 0; i < 32; i++) {
             subnetMask = i < prefix ? subnetMask + "1" : subnetMask + "0";
         }
 
-
         for (String i : splitted[0].split("\\.")) {
             String num = String.format("%8s", Integer.toBinaryString(Integer.parseInt(i))).replace(" ", "0");
-            networkAddressInBinary += num;
+            addressInBinary += num;
         }
         String tmp = "";
-        for (int i = 0; i < networkAddressInBinary.length(); i++) {
-            char a = networkAddressInBinary.charAt(i);
+        for (int i = 0; i < addressInBinary.length(); i++) {
+            char a = addressInBinary.charAt(i);
             char b = subnetMask.charAt(i);
             if (a == '1' && a == b) {
                 tmp += "1";
@@ -74,7 +74,6 @@ public class NetworkSubnetter {
 
             prevNeworkAddressInDecimal = right;
         }
-
         return subnets;
     }
 }

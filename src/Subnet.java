@@ -11,10 +11,6 @@ public class Subnet {
     private String rightBoundaryPretty;
     private String broadcastAddressPretty;
 
-    public int getPrefix() {
-        return prefix;
-    }
-
     private String pretty(String s) {
         String res = "";
         for (int i = 0; i < 32; i += 8) {
@@ -34,6 +30,10 @@ public class Subnet {
         this.leftBoundaryPretty = pretty(leftBoundary);
         this.rightBoundaryPretty = pretty(rightBoundary);
         this.broadcastAddressPretty = pretty(broadcastAddress);
+    }
+
+    public int getPrefix() {
+        return prefix;
     }
 
     public void setPrefix(int prefix) {

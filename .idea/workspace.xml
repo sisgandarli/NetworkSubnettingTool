@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NetworkSubnetter.java" afterPath="$PROJECT_DIR$/src/NetworkSubnetter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Runner.java" afterPath="$PROJECT_DIR$/src/Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Subnet.java" afterPath="$PROJECT_DIR$/src/Subnet.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +66,8 @@
       <file leaf-file-name="Runner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="198" column="34" lean-forward="false" selection-start-line="198" selection-start-column="34" selection-end-line="198" selection-end-column="34" />
+            <state relative-caret-position="216">
+              <caret line="77" column="68" lean-forward="false" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#handleAddNetworkButton#0;class#Runner#0" expanded="false" />
@@ -78,8 +79,8 @@
       <file leaf-file-name="NetworkSubnetter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NetworkSubnetter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="1241">
+              <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -88,46 +89,11 @@
       <file leaf-file-name="Subnet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Subnet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
+            <state relative-caret-position="578">
+              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1144#1145#0" expanded="true" />
-                <element signature="e#1182#1183#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-                <element signature="e#1270#1271#0" expanded="true" />
-                <element signature="e#1316#1317#0" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
-                <element signature="e#1394#1395#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1506#1507#0" expanded="true" />
-                <element signature="e#1545#1546#0" expanded="true" />
-                <element signature="e#1580#1581#0" expanded="true" />
-                <element signature="e#1636#1637#0" expanded="true" />
-                <element signature="e#1684#1685#0" expanded="true" />
-                <element signature="e#1724#1725#0" expanded="true" />
-                <element signature="e#1760#1761#0" expanded="true" />
-                <element signature="e#1818#1819#0" expanded="true" />
-                <element signature="e#1868#1869#0" expanded="true" />
-                <element signature="e#1911#1912#0" expanded="true" />
-                <element signature="e#1950#1951#0" expanded="true" />
-                <element signature="e#2014#2015#0" expanded="true" />
-                <element signature="e#2070#2071#0" expanded="true" />
-                <element signature="e#2160#2161#0" expanded="true" />
-                <element signature="e#2341#2342#0" expanded="true" />
-                <element signature="e#2382#2383#0" expanded="true" />
-                <element signature="e#2450#2451#0" expanded="true" />
-                <element signature="e#2510#2511#0" expanded="true" />
-                <element signature="e#2556#2557#0" expanded="true" />
-                <element signature="e#2598#2599#0" expanded="true" />
-                <element signature="e#2668#2669#0" expanded="true" />
-                <element signature="e#2730#2731#0" expanded="true" />
-                <element signature="e#2779#2780#0" expanded="true" />
-                <element signature="e#2824#2825#0" expanded="true" />
-                <element signature="e#3014#3015#0" expanded="true" />
-                <element signature="e#3103#3104#0" expanded="true" />
+                <element signature="method#setNetworkAddressPretty#0;class#Subnet#0" expanded="false" />
+                <element signature="method#setBroadcastAddressPretty#0;class#Subnet#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -172,8 +138,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/style.css" />
         <option value="$PROJECT_DIR$/src/Network.java" />
-        <option value="$PROJECT_DIR$/src/Subnet.java" />
         <option value="$PROJECT_DIR$/src/NetworkSubnetter.java" />
+        <option value="$PROJECT_DIR$/src/Subnet.java" />
         <option value="$PROJECT_DIR$/src/Runner.java" />
       </list>
     </option>
@@ -710,12 +676,12 @@
       <workItem from="1491929070718" duration="3391000" />
       <workItem from="1491985486493" duration="2127000" />
       <workItem from="1492022388251" duration="13437000" />
-      <workItem from="1492116009189" duration="2405000" />
+      <workItem from="1492116009189" duration="3208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37342000" />
+    <option name="totallyTimeSpent" value="38145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -810,43 +776,8 @@
         <state relative-caret-position="986">
           <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
           <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1636#1637#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1950#1951#0" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#2160#2161#0" expanded="true" />
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2382#2383#0" expanded="true" />
-            <element signature="e#2450#2451#0" expanded="true" />
-            <element signature="e#2510#2511#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2598#2599#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="e#2779#2780#0" expanded="true" />
-            <element signature="e#2824#2825#0" expanded="true" />
-            <element signature="e#3014#3015#0" expanded="true" />
-            <element signature="e#3103#3104#0" expanded="true" />
+            <element signature="method#setNetworkAddressPretty#0;class#Subnet#0" expanded="false" />
+            <element signature="method#setBroadcastAddressPretty#0;class#Subnet#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -886,43 +817,8 @@
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1636#1637#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1950#1951#0" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#2160#2161#0" expanded="true" />
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2382#2383#0" expanded="true" />
-            <element signature="e#2450#2451#0" expanded="true" />
-            <element signature="e#2510#2511#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2598#2599#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="e#2779#2780#0" expanded="true" />
-            <element signature="e#2824#2825#0" expanded="true" />
-            <element signature="e#3014#3015#0" expanded="true" />
-            <element signature="e#3103#3104#0" expanded="true" />
+            <element signature="method#setNetworkAddressPretty#0;class#Subnet#0" expanded="false" />
+            <element signature="method#setBroadcastAddressPretty#0;class#Subnet#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1086,60 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NetworkSubnetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Subnet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
-          <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1636#1637#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1950#1951#0" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#2160#2161#0" expanded="true" />
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2382#2383#0" expanded="true" />
-            <element signature="e#2450#2451#0" expanded="true" />
-            <element signature="e#2510#2511#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2598#2599#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="e#2779#2780#0" expanded="true" />
-            <element signature="e#2824#2825#0" expanded="true" />
-            <element signature="e#3014#3015#0" expanded="true" />
-            <element signature="e#3103#3104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1148,10 +990,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/NetworkSubnetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Subnet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="method#setNetworkAddressPretty#0;class#Subnet#0" expanded="false" />
+            <element signature="method#setBroadcastAddressPretty#0;class#Subnet#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="198" column="34" lean-forward="false" selection-start-line="198" selection-start-column="34" selection-end-line="198" selection-end-column="34" />
+        <state relative-caret-position="216">
+          <caret line="77" column="68" lean-forward="false" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#handleAddNetworkButton#0;class#Runner#0" expanded="false" />
