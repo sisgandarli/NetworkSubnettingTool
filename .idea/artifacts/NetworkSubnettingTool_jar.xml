@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NetworkSubnettingTool:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NetworkSubnettingTool_jar</output-path>
+    <root id="archive" name="NetworkSubnettingTool.jar">
+      <element id="module-output" name="NetworkSubnettingTool" />
+    </root>
+  </artifact>
+</component>
